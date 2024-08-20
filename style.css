@@ -8,7 +8,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: space-between; */
+    justify-content: space-between;
 }
 
 .header {
@@ -160,5 +160,12 @@ body {
     border: 1px solid #f9faf8;
     background-color: #3882f6;
     color: #f9faf8;
+}
+
+.footer {
+    background-color: #1f2937;
+    color: #e5e7eb;
+    width: 100%;
+    text-align: center;
 }
 
