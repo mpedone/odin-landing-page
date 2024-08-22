@@ -1,6 +1,17 @@
 # odin-landing-page
 Landing Page Project
 
-Creating a landing page based on an image given to us by The Odin Project.
+Creating a landing page based on an image given to us by The Odin Project (img at end of ReadMe).
 
 Lego unicorn Image by <a href="https://pixabay.com/users/d97jro-481086/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=671593">Joakim Roubert</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=671593">Pixabay</a>
+
+## Results
+I finished the project, and I think the page looks pretty good. I know that there are multiple ways to do anything in HTML/CSS, but I still have some concerns over my own solution. I am still shaky on images in flexbox. I think I have a grasp on `flex-basis` and how it essentially translates to `height` for `flex-direction: row` and `width` for `flex-direction: column`, but it doesn't *quite* work the same with images. 
+
+I also struggled with the widths of the sections. Over the past few years of learning code, the idea of simplicity has been drilled into my head, both from instructors, but also from having to edit my own code (or trying to read someone else's). As such, I prefer to have as little code as possible. I also ran into this in the flexbox exercises - I would had flexed divs everywhere, even where they weren't needed. So, for this page, I tried to use divs as little as possible, as having 4+ nested div tags can be difficult to parse. That said, this project really drilled home the container-item relationship, in that the flex settings applied to the container ONLY apply to the first children items. Anything inside those children aren't affected. So, applying `Display: Flex` to the entire body will only affect the main content sections, and not the code inside of them. Similarly, setting one of those main content sections to Flex only affects the direct children of them. For example, in the header, I have a nav bar, that is an unordered list. Setting the header to flex allows me to center the entire unordered list, but I couldn't then set the header logo to `margin-right: auto` and have it respond correctly. I had to make the `ul` flex, also. So, you end up with a box inside a box inside a box, but sometimes that's just the easiest way to do it.
+
+I wanted to have the sections be centered, around 900px wide, but for the background colors to extend to the full width. This meant having a div for the entire section (which I now realize would have been better named "info-section", but that's fine) set to `width: 100%`, and then a second div for the actual content, set to `width: 900px`. Curiously, this only affected the sections that were set to flex (I didn't set the info section to flex because the whole thing didn't need to be, just the boxes and their captions). After finishing, I looked at some of the other students' solutions, and noted that one used a div called "container" to hold everything inside body, which they then set to `max-width: 100%` and then didn't seem to set the widths on the main sections. I figure something like this would work, and it is something else that might bear more exploration in future projects.
+
+One change I did make from looking at the community solutions was to add a common class name to the sections that needed the `width: 100%` setting, as I'd spaced that multiple classes can be used at once. I originally had a group of selectors, but now it's just the one common class.
+
+![alt text](<target/Landing Page Project.png>)

@@ -11,11 +11,7 @@ body {
     justify-content: space-between;
 }
 
-.header,
-.hero,
-.info,
-.quote, 
-.footer {
+.flexed {
     width: 100%;
 }
 
